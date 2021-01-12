@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo_Survey_Results</title>
+    <style>
+        body{
+            width:0px;
+            height: auto;
+            background-color: black;
+        }
+        #container{
+            width: 970px;
+            height:auto;
+            text-align: center;
+            background-color: white;
+            border: blue solid 2px;
+        }
+        .submit-button{
+            margin-bottom:10px;
+            background-color: yellow;
+        }
+        h1{
+            border-bottom: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id='container'>
+        <h1>yes you did it</h1>
+        <h3>Submited Info</h3>
+        <p>Name: {{name_from_user}}</p>
+        <p>Dojo Location: {{location_from_user}}</p>
+        <p>Favorite Language: {{language_from_user}}</p>
+        <p>Commented: {{comments_from_user}}</p>
+        <button><h5>GO Back</h5></button>
+    </div>
+</body>
+</html>

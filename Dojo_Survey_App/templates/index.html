@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+
+    <style>
+        body{
+            width:0px;
+            height: auto;
+            background-color: black;
+        }
+        #container{
+            width: 970px;
+            height:auto;
+            text-align: center;
+            background-color: white;
+            border: blue solid 2px;
+        }
+        .submit-button{
+            margin-bottom:10px;
+            background-color: yellow;
+        }
+        h1{
+            border-bottom: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id='container'>
+        <form action="/result" method='POST'>
+            {% csrf_token %}
+            <h1>DOJO SURVEY!</h1>
+            <p>Your Name: <input type="text" name='namesss'></p>
+            <p>Dojo Location <select name="location" id="location">
+                            <option value="sanjose">San Jose</option>
+                            <option value="seattle">Seattle</option>
+                            <option value="austin">Austin</option>
+                            <option value="la">Los Angeles</option>
+                            </select></p>
+            <p>Favorite Language <select name="languages" id="languages">
+                            <option value="korean">korean</option>
+                            <option value="japanese">japanese</option>
+                            <option value="Python">Python</option>
+                            <option value="russian">russian</option>
+                            <option value="indian">indian</option>
+                            <option value="spanish">spanish</option>
+                            </select></p>
+            <p>Comment <textarea name="comments" id="comments" cols="30" rows="10"></textarea></p>
+            <input type="submit" name='submit' class='submit-button'>
+        </form>
+    </div>
+</body>
+</html>
